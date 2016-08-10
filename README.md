@@ -1,1 +1,4 @@
-# EPAM.JS.2016S.Bytskevich
+<h1>JS training tasks</h1>
+For the sake of convenience all tasks are located in separate directories.Each directory contains necessary files and its own readme with task essense in it. 
+
+* [Task 1](https://github.com/YuliyaBytskevich/EPAM.JS.2016S.Bytskevich/tree/master/Task%201)

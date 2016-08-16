@@ -11,37 +11,26 @@
  var array = [];
  var fromOneToThree;
  
+ function gettingCount(){
+	return this.count; 
+ }
+ 
  for (var i = 0; i < 5; i++) {
-	fromOneToThree = random(1, 3);
+	array[i] = { 
+		count: random(1, 10)
+	}
+	fromOneToThree = random(1, 3);	
 	switch (fromOneToThree)	{
 		case 1:
-			array[i] = {
-				count: random(1, 10),
-				getCount1: function(){
-					return this.count;
-				} 
-			}
-			console.log("type = 1, count = %d", array[i].getCount1());
+			array[i].getCount1 = gettingCount;
 			break
 		case 2:
-			array[i] = {
-				count: random(1, 10),
-				getCount2: function(){
-					return this.count;
-				} 
-			}
-			console.log("type = 2, count = %d", array[i].getCount2());
+			array[i].getCount2 = gettingCount;
 			break
 		case 3:
-			array[i] = {
-				count: random(1, 10),
-				getCount3: function(){
-					return this.count;
-				} 
-			}
-			console.log("type = 3, count = %d", array[i].getCount3());
-			break
+			array[i].getCount3 = gettingCount;
 	}
+	console.log("type = %d, count = %d", fromOneToThree, array[i].count);
  }
  
  

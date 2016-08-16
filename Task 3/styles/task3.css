@@ -1,0 +1,52 @@
+.global-container{
+	width: 755px;
+	margin: 20px auto;	
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;	
+}
+
+.global-container div{
+	display: inline-block;
+	margin: 0;
+}
+
+.field-container{
+	width: 624px;
+	height: 312px;
+	border: 1px solid black;	
+}
+
+.buttons-container{
+	width: 125px;
+	vertical-align:top;
+}
+
+.global-container .button{
+	width: 100px;
+	line-height:25px;
+	margin: 0 10px 10px 10px;
+	cursor: pointer;
+	text-align:center;
+	color: black;
+	background: rgba(0,0,0,0);
+	border: solid 1px #B6B9BA;
+}
+
+.tile{
+	width: 50px;
+	height: 50px;	
+	text-align: center;
+	border-right: solid 2px #d9d9d9;
+	border-bottom: solid 2px #d9d9d9;
+}
+
+.red-filling{
+	background-color: #f44336;
+}
+
+.orange-filling{
+	background-color: #ff9800;
+}
+
+.green-filling{
+	background-color: #4caf50;
+}

@@ -9,21 +9,18 @@
 
 var arrayLength = data.length;
 var i;
-for(i = 0; i < arrayLength; i++)
-{
+
+for (i = 0; i < arrayLength; i++){
 	/* Проверку элемента на null и undefined можно произвести с помощью оператора ===, который проверит соответствие типа. Но также можно на undefined вызвать 
 	   оператор typedef, проверка отделит все undefined элементы, поэтому можно без опаски вызывать == с null - по этому условию пройдут действительно только 
 	   элементы с null. */
-	if(typeof data[i] == "undefined")
-	{
+	if (typeof data[i] == "undefined"){
 		console.log("data[%d] = не определено", i);
 	}
-	else if(data[i] == null)
-	{
+	else if (data[i] == null){
 		console.log("data[%d] = не указано", i);
 	}
-	else
-	{
+	else{
 		/* Здесь добавлено явное приведение к Number для соблюдения п. 2.3 задания - 
 		   в случае булевского значения элемента без приведения типа будет выведено true/false, что противоречит заданию */
 		console.log("data[%d] = %s", i, Number(data[i]));

@@ -1,0 +1,70 @@
+@import "global_variables";
+@import "mixins";
+
+.global-container{
+	.set-container-parameters(800px, 400px, 10% auto);
+	box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.resources-container{
+	.set-container-parameters(482px, 328px, 1% auto);
+}
+
+button{
+	width: 70px;
+	margin: 10px 10px 0 720px;
+	padding: 3px 0;
+	border-radius: 3px;
+	border: solid @color-button-border 1px;
+	.set-font;
+
+	&.starting{
+		color: @color-start-text;
+		background-color: @color-start-filling;
+
+		&:hover {
+			background-color: @color-start-hover;
+		}
+	}
+	
+	&.stopping{
+		color: @color-stop-text;
+		background-color: @color-stop-filling;
+	
+		&:hover {
+			background-color: @color-stop-hover;
+		}
+	}
+}
+
+.resource-box{
+	.set-container-parameters(70px, 70px, 2px);
+	display: inline-block;
+	vertical-align: top;
+	
+	&:nth-child(4){
+		margin-top: -80px;
+	}
+	
+	&:last-child{
+		margin-top: -80px;
+		margin-left: 324px;
+	}
+	
+	.resource-icon{
+		.set-container-parameters(50px, 50px, 3px 10px);
+		border: none;
+	}
+	
+	p{
+		margin: -5px 32px;
+		.set-font;
+	}
+}
+
+.resource-field{
+	.set-container-parameters(320px, 320px, 2px -3px);
+	display: inline-block;
+}
+
+

@@ -57,7 +57,7 @@ button{
 	}
 	
 	p{
-		margin: -5px 32px;
+		margin: -7px 32px;
 		.set-font;
 	}
 }
@@ -65,6 +65,32 @@ button{
 .resource-field{
 	.set-container-parameters(320px, 320px, 2px -3px);
 	display: inline-block;
+	position: relative;
+	
+	.bomb{
+		.configure-game-objects;
+		background-image: url(../images/bomb.png);
+	}
 }
 
+.new-resource{
+	.configure-game-objects;
+	cursor: pointer;
+	
+	&.cheese{
+		background-image: url(../images/cheese.png);
+	}
+	
+	&.cherry{
+		background-image: url(../images/cherry.png);
+	}
+	
+	&.orange{
+		background-image: url(../images/orange.png);
+	}
+	
+	&.pumpkin{
+		background-image: url(../images/pumpkin.png);
+	}
+}
 

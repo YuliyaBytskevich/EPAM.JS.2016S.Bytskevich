@@ -1,3 +1,5 @@
+@import "global_variables";
+
 .set-font{
 	font-family: @general-font;		
 	font-size: @general-font-size;
@@ -9,4 +11,12 @@
 	margin: @margin;	
 	background-color: @color-container;
 	border: 2px solid @color-container-border; 
+}
+
+.configure-game-objects{
+	.set-container-parameters(50px, 50px, 0);
+	border: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
 }

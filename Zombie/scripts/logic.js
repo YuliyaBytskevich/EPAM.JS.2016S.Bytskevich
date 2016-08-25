@@ -11,7 +11,7 @@ $(document).ready(function() {
 	var $slow = $("#slow");	
 	var $aging = $("#aging");
 	var $explode = $("#explode");
-	var	$reset = $("#reset");
+	var $reset = $("#reset");
 	
 	var id = 0;
 	var zombies = [];
@@ -25,23 +25,23 @@ $(document).ready(function() {
 			div.id = 10;
 			runMoving(randomZombie);
 		}	
-    });	
+    	});	
 			
 	$slow.click(function() {
 		if (zombies.length) {		
 			var base = new Unit.BaseZombie();
-			zombies.forEach(function(zombie, i){	
+			zombies.forEach(function(zombie, i) {	
 				zombie.speed = base.speed;
 			});
 			$slow.prop("disabled", true);
-			setTimeout(function (){
+			setTimeout(function () {
 				zombies.forEach(function(zombie, i){	
 					zombie.speed = (new zombie.constructor()).speed;
 				});
 				$slow.prop("disabled", false);
 			}, 10000);
 		}
-    });		
+    	});		
 
 	$aging.click(function() {
 		if (zombies.length) {
@@ -49,10 +49,9 @@ $(document).ready(function() {
 			var repeats = 0;
 			var timer = setTimeout(looseOneHP, 1000);	
 			function looseOneHP() {
-				zombies.forEach(function(zombie, i){	
+				zombies.forEach(function(zombie, i) {	
 					zombie.health -= 1;
-					if (zombie.health > 0)
-					{
+					if (zombie.health > 0) {
 						var persentage = zombie.health * 100 / (new zombie.constructor()).health;
 						$(zombie.healthSelector).width(persentage + "%");
 						$(zombie.healthSelector + " p").text(Math.floor(persentage) + "%");
@@ -75,14 +74,13 @@ $(document).ready(function() {
 				}
 			}
 		}
-    });	
+    	});	
 	
 	$explode.click(function() {
 		if (zombies.length) {
-			zombies.forEach(function(zombie, i){	
+			zombies.forEach(function(zombie, i) {	
 				zombie.health -= 15;
-				if (zombie.health > 0)
-				{
+				if (zombie.health > 0) {
 					var persentage = zombie.health * 100 / (new zombie.constructor()).health;
 					$(zombie.healthSelector).width(persentage + "%");
 					$(zombie.healthSelector + " p").text(Math.floor(persentage) + "%");
@@ -101,7 +99,7 @@ $(document).ready(function() {
 				return zombie.viewBlock.hasClass("dead");
 			}
 		}
-    });	
+    	});	
 			
 	$reset.click(function() {	
 		id = 0;

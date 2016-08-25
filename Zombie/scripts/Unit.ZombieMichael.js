@@ -10,15 +10,19 @@ Unit.ZombieMichael.prototype.constructor = Unit.ZombieMichael;
 Unit.ZombieMichael.prototype.die = function() {
 	Unit.BaseZombie.prototype.die.apply(this);
   
-	var leftOffset = "+=50px";
+	var leftOffset = "+=20px";
 	var newOpacity = 1;
 	var j = 0;
     var block = this.viewBlock;
+	var id = this.id;
   
 	for (var i = 0; i < 10; i++) {
-		setTimeout(moonWalk, 400);
+		setTimeout(moonWalk, 300);
 	}
-  
+	setTimeout(function(){
+		$("div").remove("#" + id);
+	}, 2500);
+	
 	function moonWalk(){
 		block.animate({ left: leftOffset, opacity: recountedOpacity()}, 400);
 	}

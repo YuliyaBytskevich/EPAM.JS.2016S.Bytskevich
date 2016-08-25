@@ -8,5 +8,9 @@ Unit.ZombieFly.prototype.constructor = Unit.ZombieFly;
 
 Unit.ZombieFly.prototype.die = function() {
 	Unit.BaseZombie.prototype.die.apply(this);
-	this.viewBlock.animate({ top: "-500px", opacity: "0" }, 1500);
+	this.viewBlock.animate({ top: "-500px", opacity: "0" }, 1500 );
+	var id = this.id;
+	setTimeout(function(){
+		$("div").remove("#" + id);
+	}, 2000);
 }
